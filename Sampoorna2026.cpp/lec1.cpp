@@ -1,30 +1,37 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-int main() {
-    long long n, t;
-    cin >> n >> t;
 
-    vector<long long> arr(n);
-    for (long long i = 0; i < n; i++) {
-        cin >> arr[i];
+int main(){
+    long long  n,m,k;
+    cin>>n>>m>>k;
+
+    vector<long long>arr(n);
+    vector<long long >brr(m);
+
+    for (long long  i = 0; i < n; i++){
+        cin>>arr[i];
     }
 
-    sort(arr.begin(), arr.end());
+    for (long long i = 0; i < m; i++){
+        cin>>brr[i];
+    }
 
-    long long i = 0, j = n - 1;
-    long long bogi = 0;
+    sort(arr.begin(),arr.end());
+    sort(brr.begin(),brr.end());
 
-    while (i <= j) {
-        if (arr[i] + arr[j] <= t) {
-            i++;   
-            j--;   
-        } else{
-            j--;  
+    long long j=0;
+    long long ans=0;
+    for (long long i = 0; i < n and j<m; i++){
+        if(arr[i]==brr[j] || brr[j]-k<=arr[i]||brr[j]+k>=arr[i]){
+            ans++;
+        }else{
+            j++;
         }
-        bogi++;
     }
+    cout<<ans<<endl;
+    
+    
 
-    cout << bogi << endl;
-    return 0;
+
 }
