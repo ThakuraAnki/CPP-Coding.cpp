@@ -1,42 +1,33 @@
-#include<bits/stdc++.h>
-#define FOR(n)for(int i = 0; i < n; i++)
-#define ll long long
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
+int main() {
+    int n;
+    cin >> n;
 
+    vector<int> coins(n);
+    int total = 0;
 
-    int n,m;
-    cin>>n>>m;
-
-
-    int arr[n][m];
-    for (int  i = 0; i < n; i++){
-        for (int j = 0; j < m; j++){
-           cin>>arr[i][j];
-        }
-    }
-cout<<endl;
-    int sum=0;
-    int ans[n][m];
-     for (int  i = 0; i < n; i++){
-        for (int j = 0; j < m; j++){
-           sum+=arr[i][j];
-           ans[i][j]=sum;
-        }
+    for(int i = 0; i < n; i++) {
+        cin >> coins[i];
+        total += coins[i];
     }
 
-     for (int  i = 0; i < n; i++){
-        for (int j = 0; j < m; j++){
-            cout<<ans[i][j]<<" ";
+    sort(coins.rbegin(), coins.rend());
+
+    int mySum = 0;
+    int count = 0;
+
+    for(int i = 0; i < n; i++) {
+        mySum += coins[i];
+        count++;
+
+        if(mySum > total - mySum) {
+            break;
         }
-        cout<<endl;
     }
 
+    cout << count << endl;
 
-    
-
-
-
-
+    return 0;
 }

@@ -1,41 +1,28 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    int n;cin>>n;
-    int amount;cin>>amount;
+int main() {
+    int n;
+    cin >> n;
 
-    int arr[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin>>arr[i];
+    vector<long long> t(n);
+    for(int i = 0; i < n; i++) {
+        cin >> t[i];
     }
-    int dp[100];
-   for(int i=0;i<=amount;i++){
-    dp[i]=INT_MAX;
-   }
-    dp[0]=0;
-    for (int i = 1; i <=amount; i++){
-        int ans=INT_MAX;
-        for(int k=0;k<n;k++){
-            if(arr[k]<=i){
-                int ci=i-arr[k];
-                if(dp[ci]!=INT_MAX){
-                    ans=min(ans,dp[ci]+1);
-                }
-            }
+
+    sort(t.begin(), t.end());
+
+    long long currentTime = 0;
+    int satisfied = 0;
+
+    for(int i = 0; i < n; i++) {
+        if(currentTime <= t[i]) {
+            satisfied++;
+            currentTime += t[i];
         }
-        dp[i]=ans;
-        
     }
-    set<int>an;
-    int cnt=0;
-    cout<<dp[amount]<<endl;
-   
-   
 
+    cout << satisfied << endl;
 
-    
-
-
+    return 0;
 }
