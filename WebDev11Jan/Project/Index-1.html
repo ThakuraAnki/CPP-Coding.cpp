@@ -11,13 +11,22 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 </head>
-
+<style>
+       .color-option {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      border: 2px solid #ddd;
+      cursor: pointer;
+    }
+</style>
 <body>
 
     <div class="container-fluid border border-1" style="height: 70px;">
         <div class="h-100 d-flex justify-content-around align-items-center">
             <div style="width: 30%;" class="h-100 d-flex justify-content-around align-items-center">
-                <img class="img-fluid h-100" src="https://coding-blocks.github.io/assets/images/cb/cblogo.png" alt="">
+                     <h5 class="fw-bold">🛍 ShopPro</h5>
+
             </div>
             <div style="width: 30%;" class="h-100 d-flex justify-content-around align-items-center">
                 <div class="row">
@@ -38,16 +47,330 @@
             </div>
         </div>
     </div>
-
-    <div class="container">
-        <div style="height: 700px;" class="row">
-            <div class="h-100 col-1">1</div>
-            <div style=" font-size: 150px;" class="d-flex justify-content-center align-items-center rounded-3 col-6 border border-primary bg bg-gradient bg-primary">👕</div>
-            <div class="h-100 col-5">3</div>
+<div class="container mt-4">
+  <div class="row align-items-start">
+    <div class="col-md-2 d-flex flex-column gap-3 align-items-end">
+  <div class="border rounded-2 d-flex justify-content-center align-items-center bg-info"style="height:70px; width:80px;">👕</div>
+  <div class="border rounded-2 d-flex justify-content-center align-items-center"style="height:70px; width:80px; background-color:aquamarine;">👕</div>
+  <div class="border rounded-2 d-flex justify-content-center align-items-center"style="height:70px; width:80px; background-color:black;">👕</div>
+  <div class="border rounded-2 d-flex justify-content-center align-items-center"style="height:70px; width:80px; background-color:blue;">👕</div>
+</div>
+    <div class="col-md-5 d-flex justify-content-center align-items-center">
+      <div class="border border-primary rounded-3 bg-primary bg-gradient d-flex justify-content-center align-items-center"
+           style="height:530px; width:100%; font-size:100px;">
+        👕
+      </div>
+    </div>
+    <div class="col-md-4">
+      <nav class="row">Home > Men > T-Shirt</nav>
+      <h1 style="font-size: 30px; font-weight:500;  padding: 4px;gap: 5px;">Premium Cotton T-Shirt</h1>
+      <p>🌟🌟🌟🌟🌟 4.8(2M-Reviews)</p>
+<hr class="my-4">
+        <div class="flex-column">
+      <span style="font-size: 30px; font-weight:500;color: blue;">💲32.8</span>
+      <span style="text-decoration:line-through;gap: 2px;">85.4</span>
+      <span style="background-color: rgb(22, 122, 27) ;border-radius: 80px;gap: 3px;">30% OFF</span>
         </div>
+<hr class="my-4">
+       
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quidem ipsum ut totam mollitia dolorem eaque assumenda facilis quaerat dolore officia culpa velit quasi iusto deleniti, et atque tenetur ducimus dicta officiis! Placeat officia esse non tempore excepturi alias repellat repudiandae saepe ea eos! In a minima error sapiente nemo.</p>
+       <h1 style="font-size: small;">Color</h1>
+  <div class="d-flex gap-3 mb-4">
+    <div class="color-option bg-dark active"></div>
+    <div class="color-option bg-primary"></div>
+    <div class="color-option bg-danger"></div>
+    <div class="color-option bg-success"></div>
+  </div>
+    <h6>Size</h6>
+  <div class="d-flex gap-2 mb-4">
+    <button class="btn btn-outline-secondary size-btn">XS</button>
+    <button class="btn btn-outline-secondary size-btn">S</button>
+    <button class="btn btn-primary size-btn">M</button>
+    <button class="btn btn-outline-secondary size-btn">L</button>
+    <button class="btn btn-outline-secondary size-btn">XL</button>
+  </div>
+   <div class="d-flex align-items-center gap-3">
+
+    <div class="input-group" style="width:120px;">
+      <button class="btn btn-outline-secondary">-</button>
+      <input type="text" class="form-control text-center" value="1">
+      <button class="btn btn-outline-secondary">+</button>
     </div>
 
+    <small class="text-success">
+      ✔ 234 items in stock
+    </small>
+    </div>
+    <span style="width: 400px;height: 50px; border-radius: 20px; display: flex; justify-content: center;align-items: center; background-color: blue;">Add to Card</span>
+    <div>
+       <div class="d-flex gap-3 mb-4">
+  <button class="btn btn-light border rounded-3 px-4 py-2 d-flex align-items-center gap-5">❤️ <span>Wishlist</span></button>
+  <button class="btn btn-light border rounded-3 px-4 py-2 d-flex align-items-center gap-5">🔗<span>Share</span></button>
+</div>
 
+    </div>
+    <div class="container mt-4">
+  <div class="p-4 rounded-4" style="background-color:#f1f3f6;">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-3">
+          <div class="bg-white rounded-circle d-flex justify-content-center align-items-center"
+               style="width:60px;height:60px;font-size:22px;">
+            🚚
+          </div>
+          <div>
+            <h6 class="mb-1 fw-semibold">Free Shipping</h6>
+            <small class="text-muted">On orders over $50</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-3">
+          <div class="bg-white rounded-circle d-flex justify-content-center align-items-center"
+               style="width:60px;height:60px;font-size:22px;">
+            ↩️
+          </div>
+          <div>
+            <h6 class="mb-1 fw-semibold">Easy Returns</h6>
+            <small class="text-muted">30-day return policy</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-3">
+          <div class="bg-white rounded-circle d-flex justify-content-center align-items-center"
+               style="width:60px;height:60px;font-size:22px;">
+            ✔️
+          </div>
+          <div>
+            <h6 class="mb-1 fw-semibold">Quality Guaranteed</h6>
+            <small class="text-muted">Premium materials</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-3">
+          <div class="bg-white rounded-circle d-flex justify-content-center align-items-center"
+               style="width:60px;height:60px;font-size:22px;">
+            🔒
+          </div>
+          <div>
+            <h6 class="mb-1 fw-semibold">Secure Payment</h6>
+            <small class="text-muted">SSL encrypted</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="container my-5 ">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="fw-bold">You May Also Like</h4>
+    <a href="#" class="text-primary text-decoration-none">View All →</a>
+  </div>
+  <div class="row g-4 d-flex flex-wrap">
+    <div class="col-md-3">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="p-5 text-center text-white"
+             style="background: linear-gradient(135deg,#ff7eb3,#ff758c); font-size:40px;">
+          <img style="border: #e42c39;width: 200px;height: 200px;" src="https://shararat.in/cdn/shop/products/17213RD_5_600x.jpg?v=1684494815" alt="">
+          
+        </div>
+        <div class="card-body">
+          <h6 class="fw-semibold">Classic Red garmets</h6>
+          <small class="text-muted">Mature Women CLoths</small>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="fw-bold text-primary">$29.99</span>
+            <button class="btn btn-primary btn-sm rounded-circle">+</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="p-5 text-center text-white"
+             style="background: linear-gradient(135deg,#ff7eb3,#ff758c); font-size:40px;">
+          <img style="border: #e42c39;width: 200px;height: 200px;" src="https://shararat.in/cdn/shop/files/R90087BK_1_600x.jpg?v=1691735064" alt="">
+          
+        </div>
+        <div class="card-body">
+          <h6 class="fw-semibold">Classic Dark ow</h6>
+          <small class="text-muted">Mature Women CLoths</small>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="fw-bold text-primary">$29.99</span>
+            <button class="btn btn-primary btn-sm rounded-circle">+</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="p-5 text-center text-white"
+             style="background: linear-gradient(135deg,#ff7eb3,#ff758c); font-size:40px;">
+          <img style="border: #e42c39;width: 200px;height: 200px;" src="https://shararat.in/cdn/shop/products/ML1105PK_5_600x.jpg?v=1684495316" alt="">
+          
+        </div>
+        <div class="card-body">
+          <h6 class="fw-semibold">Classic Tut garmets</h6>
+          <small class="text-muted">Mature Women CLoths</small>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="fw-bold text-primary">$29.99</span>
+            <button class="btn btn-primary btn-sm rounded-circle">+</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="p-5 text-center text-white"
+             style="background: linear-gradient(135deg,#2c0d83,#1a1884); font-size:40px;">
+          <img style="border: #e42c39;width: 200px;height: 200px;" src="https://shararat.in/cdn/shop/files/AH138BK_1_600x.jpg?v=1691572213" alt="">
+          
+        </div>
+        <div class="card-body">
+          <h6 class="fw-semibold">Classic Ele garmets</h6>
+          <small class="text-muted">Mature Women CLoths</small>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="fw-bold text-primary">$29.99</span>
+            <button class="btn btn-primary btn-sm rounded-circle">+</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="p-5 text-center text-white"
+             style="background: linear-gradient(135deg,#ff7eb3,#ff758c); font-size:40px;">
+          <img style="border: #e42c39;width: 200px;height: 200px;" src="https://shararat.in/cdn/shop/products/12606WH_5_600x.jpg?v=1684495081" alt="">
+          
+        </div>
+        <div class="card-body">
+          <h6 class="fw-semibold">Classic hulu X</h6>
+          <small class="text-muted">Mature Women CLoths</small>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="fw-bold text-primary">$29.99</span>
+            <button class="btn btn-primary btn-sm rounded-circle">+</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="p-5 text-center text-white"
+             style="background: linear-gradient(135deg,#ff7eb3,#ff758c); font-size:40px;">
+          <img style="border: #e42c39;width: 200px;height: 200px;" src="https://shararat.in/cdn/shop/products/10400BL_5_600x.jpg?v=1684494630" alt="">
+          
+        </div>
+        <div class="card-body">
+          <h6 class="fw-semibold">Classic lusty garmets</h6>
+          <small class="text-muted">Mature Women CLoths</small>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="fw-bold text-primary">$29.99</span>
+            <button class="btn btn-primary btn-sm rounded-circle">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="p-5 text-center text-white"
+             style="background: linear-gradient(135deg,#ff7eb3,#ff758c); font-size:40px;">
+          <img style="border: #119c4b;width: 200px;height: 200px;" src="https://shararat.in/cdn/shop/files/9_600x.jpg?v=1686732508" alt="">
+        </div>
+        <div class="card-body">
+          <h6 class="fw-semibold">Nice Hotel rest classy</h6>
+          <small class="text-muted">Mature Women CLoths</small>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="fw-bold text-primary">$29.99</span>
+            <button class="btn btn-primary btn-sm rounded-circle">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="p-5 text-center text-white"
+             style="background: linear-gradient(135deg,#119c4b,#1fa42a); font-size:40px;">
+          <img style="border: #119c4b;width: 200px;height: 200px;" src="https://shararat.in/cdn/shop/products/17213RD_5_600x.jpg?v=1684494815" alt="">
+        </div>
+        <div class="card-body">
+          <h6 class="fw-semibold">Night shut with garmets</h6>
+          <small class="text-muted">Mature Women CLoths</small>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="fw-bold text-primary">$29.99</span>
+            <button class="btn btn-primary btn-sm rounded-circle">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <footer  style="width: 1300px;height: 500px; background-color: rgb(29, 19, 75);" class="text-light pt-10 pb-3">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-3">
+        <h5 class="fw-bold">🛍 ShopPro</h5>
+        <p class="small text-secondary">
+          Your trusted online shopping destination for premium quality products.
+        </p>
+        <i style="border-radius: 50px;background-color: black;color: lightyellow;">Facebook</i>
+        <i style="border-radius: 50px;background-color: black;color: lightyellow;">X</i>
+        <i style="border-radius: 50px;background-color: black;color: lightyellow;">In</i>
+        <i style="border-radius: 50px;background-color: black;color: lightyellow;">Youtube</i>
+
+
+
+      </div>
+      <div class="col-md-2">
+        <h6 class="fw-semibold">Shop</h6>
+        <ul class="list-unstyled small">
+          <li>New Arrivals</li>
+          <li>Best Sellers</li>
+          <li>Men</li>
+          <li>Women</li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h6 class="fw-semibold">Support</h6>
+        <ul class="list-unstyled small">
+          <li>Contact Us</li>
+          <li>Returns</li>
+          <li>Shipping Info</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h6 class="fw-semibold">Company</h6>
+        <ul class="list-unstyled small">
+          <li>About</li>
+          <li>Careers</li>
+          <li>Blog</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6 class="fw-semibold">Newsletter</h6>
+        <div class="input-group mt-2">
+          <input type="email" class="form-control" placeholder="Enter your email">
+          <button class="btn btn-primary">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+  
+
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
