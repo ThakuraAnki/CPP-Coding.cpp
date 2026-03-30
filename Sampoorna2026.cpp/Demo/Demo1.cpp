@@ -1,140 +1,95 @@
-#include <iostream>
-using namespace std;
-
-class node {
+class Solution {
 public:
-	int data;
-	node* next;
-	node(int d) {
-		data = d;
-		next = NULL;
-	}
-};
 
-int lengthLL(node* h) {
-	int cnt = 0;
-	while (h != NULL) {
-		cnt++;
-		h = h->next;
-	}
 
-	return cnt;
-}
 
-void insertAtFront(node* &h, node* &t, int data) {
-	if (h == NULL) {
-		h = t = new node(data);
-	}
-	else {
-		node* n = new node(data);
-		n -> next = h;
-		h = n;
-	}
-}
 
-void insertAtEnd(node* &h, node* &t, int data) {
-	if (h == NULL) {
-		h = t = new node(data);
-	}
-	else {
-		node* n = new node(data);
-		t->next = n;
-		t = n;
-	}
-}
+    //if NSE doesnt exist to the right take it as index N
+    //sly for left take it as -1 
 
-void insertAtMid(node* &h, node* &t, int pos, int data) {
-	if (pos == 0) {
-		insertAtFront(h, t, data);
-	}
-	else if (pos >= lengthLL(h)) {
-		insertAtEnd(h, t, data);
-	}
-	else {
 
-		node* temp = h;
-		for (int i = 0; i < pos - 1; ++i)
-		{
-			temp = temp->next;
-		}
+vector<int>nsel(vector<int>A){
+    stack<int>s;
+    int n=A.size();
+    vector<int>nsel;
+    for(int i=0;i<n;i++){//change 1 
 
-		node* n = new node(data);
-		n->next = temp->next;
-		temp->next = n;
-	}
-}
+        //find the NGE to the left
 
-void printLL(node* h) {
-	while (h != NULL) {
-		cout << h->data << "->";
-		h = h->next;
-	}
-	cout << "NULL\n";
-}
+        while(!s.empty()  && A[s.top()]>=A[i]){
+            //s.top() cannot be the nse to the left  so we can pop
+            s.pop(); 
+        }
 
-int main() {
-
-	node* head, *tail;
-	head = tail = NULL;
-    int n;
-    cin>>n;
-    for (int i = 0; i < n; i++){
-       int val;
-       cin>>val;
-       insertAtEnd(head,tail,val);
+        // now 2 cases after this loop 
+        if(s.empty()){
+            nsel.push_back(-1);
+        }
+        else{
+            nsel.push_back(s.top());
+            
+        }
+        //now weve found the answer for arr[i] ,but before moving to the left push 
+        //it in the stack as it can be valid candidate for other elements 
+        s.push(i);
     }
 
-    node* head1, *tail1;
-	head1 = tail1 = NULL;
-    int n1;
-    cin>>n1;
-    for (int i = 0; i < n1; i++){
-       int val;
-       cin>>val;
-       insertAtEnd(head1,tail1,val);
-    }
-    int a=0;
-        while(head!=NULL){
-            a*=10;
-            a+=head->data;
-            head=head->next;
-        }
-         int b=0;
-        while(head1!=NULL){
-            b*=10;
-            b+=head1->data;
-            head1=head1->next;
-        }
-        int ans=a+b;
-        node*h,*t;
-        h=t=NULL;
-        while(ans>0){
-            int ld=ans%10;
-            insertAtEnd(h,t,ld);
-            ans/=10;
-        }
-        while(h!=NULL){
-            cout<<h->data<<" ";
-            h=h->next;
-        }
-        
-        
+    return nsel;
     
-
-	return 0;
+    
 }
 
 
+vector<int>nser(vector<int>A){
+    stack<int>s;//tracks indices 
+    int n=A.size();
+    vector<int>nser;
+    for(int i=n-1;i>=0;i--){
+
+        //find the NGE to the right 
+
+        while(!s.empty()  && A[s.top()]>=A[i]){
+            //s.top() cannot be the NSE to the right so we can pop
+            s.pop(); 
+        }
+
+        // now 2 cases after this loop 
+        if(s.empty()){
+            nser.push_back(n);
+        }
+
+        else{
+            nser.push_back(s.top());
+        }
+        //now weve found the answer for arr[i] ,but before moving to the left push 
+        //it in the stack as it can be valid candidate for other elements 
+        s.push(i);
+    }
+    reverse(nser.begin(),nser.end());
+    return nser;
+}
 
 
+int largestRectangleArea(vector<int>& heights) {
+        //basically height and width are candidates so we fix height and try to find the best width .then we maximise the area 
+        
+        int ans=0;
+        //PRECOMPUTATION
 
+        vector<int>NSELIDX=nsel(heights);
+        vector<int>NSERIDX=nser(heights);
 
+        for(int i=0;i<heights.size();i++){
+            //we need to tell this in constant time for O(n) soln 
+            //and that is NSE to the left and right 
 
+            int bestwidth=NSERIDX[i]-NSELIDX[i]-1;
+            //basically if j is nsel and k is nser then (j+1)....(k-1) is the answer
+            int bestarea=bestwidth*heights[i];
+            ans=max(ans,bestarea);
+        }
 
-
-
-
-
-
-
-
+        return ans;
+        
+    }
+};

@@ -1,19 +1,25 @@
-int curMax=0;
-    int curMin=0;
-    int Maxsum=arr[0];
-    int Minsum=arr[0];
-    int TSum=0;
 
-    for(int x:arr){
-        curMax=max(curMax,0)+x;
-        Maxsum=max(Maxsum,curMax);
+    int n=a.size();
+    int m=b.size();
 
-        curMin=min(curMin,0)+x;
-        Minsum=min(Minsum,curMax);
-        TSum+=x;
+    reverse(a.begin(),a.end());
+    
+    int cnt=0;
+    string ans="";
+    for (int i = 0; i < n; i++){
+        if(b.find(a[i])!=string::npos){
+            ans+=a[i];
+            cnt++;
+        }else{
+            if(!ans.empty()){
+            ans+=a[i];
+            }
+        }
+
+        if(cnt==m){
+            break;
+        }
+        
     }
-    if(TSum==Minsum){
-        cout<<Maxsum<<endl;
-    }else{
-        cout<<max(Maxsum,TSum-Minsum);
-    }
+    reverse(ans.begin(),ans.end());    
+    cout<<ans<<endl;

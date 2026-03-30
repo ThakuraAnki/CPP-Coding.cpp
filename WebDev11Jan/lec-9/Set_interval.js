@@ -1,4 +1,3 @@
-
 let id=setInterval(()=>{
     console.log("hi");
 

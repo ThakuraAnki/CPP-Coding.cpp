@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .div{
+            min-height: 200px;
+            padding: 30px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Bubbling</h1> 
+    <div class="GrandParent div">
+        GrandParent
+        <div class="Parent div">
+            Parent
+            <div class="child div">
+                child
+            </div>
+        </div>
+    </div> 
+    <script>
+        let GrandParent=document.querySelector('.GrandParent');
+        let Parent=document.querySelector('.Parent');
+        let Child=document.querySelector('.child');
+        GrandParent.addEventListener('click',(ev)=>{
+            console.log("I am GrandParent");
+            ev.stopPropagation();
+        },true)
+        Parent.addEventListener('click',()=>{
+            console.log("I am Parent");
+
+
+        },false)
+        Child.addEventListener('click',()=>{
+            console.log("I am Child");
+
+        },true)
+
+
+    </script>
+</body>
+</html>
