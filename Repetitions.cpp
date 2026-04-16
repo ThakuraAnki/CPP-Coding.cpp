@@ -8,7 +8,7 @@ int main(){
     string s;
     cin>>s;
     
-    int ans =1;
+    int ans =;
     int cnt=1;
     char chk=s[0];
 

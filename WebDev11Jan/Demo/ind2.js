@@ -1,3 +1,4 @@
-
-console.log("+[]", +[]); // Array ko integer mei convert karna
-console.log("\\t == 0", 0 == '-\t');
+let obj={a:20};
+console.log(obj.a);
+let obj2={a: obj.a};
+console.log(obj2.a);
