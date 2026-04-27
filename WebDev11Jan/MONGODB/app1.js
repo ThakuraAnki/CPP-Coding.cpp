@@ -22,7 +22,6 @@ async function main() {
         throw new Error("Cannot connect to mongodb");
     }
 }
-
 app.get('/todos', async (req, res) => {
     try {
         let allTodos = await todosCollection.find({}).toArray();
@@ -68,3 +67,5 @@ main()
             console.log("http://localhost:4444/")
         })
     })
+
+    mongodb+srv://ankit:<db_password>@cluster0.shgmu3e.mongodb.net/?appName=Cluster0
